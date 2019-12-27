@@ -1,0 +1,331 @@
+/*---------------HEADERS---------------*/
+
+.header {
+    padding: 20px;
+    text-align: center;
+    background: #6dbad4;
+    color: white;
+    font-size: 50px;
+}
+
+/*---------------NavBars---------------*/
+
+.topnavbar {
+    display: block;
+    padding: 10px;
+    background-color: #6dbad4;
+    top: 0;
+    bottom: 0;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+}
+
+.topnavbar a{
+    background-color: #6dbad4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px;
+    border: black 3px;
+    cursor: pointer;
+    float: right;
+}
+
+.topnavbar a:hover{
+    background-color: #7facd9;
+    color: white;
+    border-radius: 10%;
+}
+
+.topnavbar a:not(#hover)
+{
+    align-items: left;
+    margin-right: 50%;
+    color: white;
+}
+
+
+/*---------------Body---------------*/
+
+body {
+    margin: 0 auto;
+    border-width: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(./resources/background-website.jpg);
+    background-size: auto;
+}
+
+.removeWhiteSpace
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------Buttons---------------*/
+
+.login-button{
+    background-color: #6da0d4;
+    color: white;
+    padding: 12px;
+    align-content: center;
+    border: black 3px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.verlof-button{
+    background-color: #6da0d4;
+    color: white;
+    padding: 12px;
+    align-content: center;
+    border: black 3px;
+    cursor: pointer;
+    border-radius: 10%;
+    margin-top: 25px;
+}
+
+
+.beschikbaarheid-button{
+    background-color: #6da0d4;
+    color: white;
+    align-content: center;
+    border: black 3px;
+    cursor: pointer;
+    border-radius: 10%;
+    margin: 10px;
+    width: 50px;
+    height: 40px;
+}
+
+.button-center
+{
+    align-self: center;
+}
+
+/*---------------Input Login Screen---------------*/
+
+.center{
+    align-content: center !important;
+}
+
+.login-center{
+    margin: 0 auto;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.input-center{
+    background-color: whitesmoke;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 350px;
+    min-height: 200px;
+    padding-bottom: 30px;
+    padding: 42px
+}
+
+.text-input{
+    padding-top: 10px;
+    padding-left: 20px
+}
+
+input{
+    border: 0px;
+    padding: 10px;
+}
+
+input:not(){
+    border-color: red;
+}
+
+.UnamePadding{
+    padding-right: 10px;
+}
+
+.PwordPadding{
+    padding-right: 14px;
+}
+
+.text-line
+{
+    background-color: transparent;
+    color: lightslategrey;
+    outline: none;
+    outline-style: none;
+    outline-offset: 0;
+    border-top: none;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid black 1px;
+    padding: 3px 10px;
+}
+
+/*---------------Footer---------------*/
+
+footer
+{
+    background-color: #6da0d4;
+    position: fixed;
+    height: 40px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    clear: both;
+}
+
+.footer-text{
+    color: white;
+    padding-top: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+/*---------------Footer---------------*/
+
+
+.imageCenter{
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 350px;
+    min-height: 200px;
+    padding-bottom: 30px;
+    padding: 42px
+}
+
+
+.row::after{
+    margin: 0 auto;
+    content: "";
+    clear: both;
+    display: table;
+    padding-bottom: 30px;
+    padding: 200px;
+    align-items: center;
+    text-align: center;
+}
+
+.row{
+    margin-left: 210px !important;
+    padding-left: 250px;
+}
+
+.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    margin: 0 auto;
+    padding-top: 250px;
+}
+
+
+/*---------------Text---------------*/
+.whiteText
+{
+    color: white !important;
+}
+
+.linkText{
+    color: #6da0d4;
+    display: block;
+}
+
+.text-center{
+    align-items: center;
+}
+
+.text-align-left{
+    align-items: left;
+}
+
+.font-size{
+    font-size: 25px;
+}
+
+/*---------------Overig---------------*/
+
+.margin-top{
+    padding-top: 10px;
+}
+
+/*---------------Beschikbaarheid---------------*/
+
+.container-center{
+    background-color: rgba(0, 0, 0, 0.3);
+
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 70%;
+    min-height: 200px;
+    padding-bottom: 30px;
+    padding: 42px
+}
+
+.item-center{
+    text-align: center;
+}
+
+.text-center-padding{
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*---------------Beschikbaarheid---------------*/
+
+.data{
+    padding: 0px 100px;
+}
+
+
+/*---------------Tables---------------*/
+
+.table-mid{
+    margin-left: 200px;
+    align-self: center !important; 
+    margin: 0 auto !important;
+    border: 1px black;
+}
+
+.table-row{
+    width: 80%;
+    background-color: rgba(101, 172, 197, 0.281)
+}
+
+.table-column{
+    width: 20%;
+    text-align: center;
+    color: black;
+}
+
+.table-column-verlof{
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.table-column-verlof-button{
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+/*---------------Verlof---------------*/
+
+.center-verlof-input{
+    
+    align-content: center;
+    border: black 3px;
+    cursor: pointer;
+    
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+}
+
+.top-space{
+    padding-top: 10px;
+}
