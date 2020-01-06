@@ -51,17 +51,19 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^9.3.2",
-    "coveralls": "^3.0.9",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "jest": "^24.9.0",
-    "jest-dom": "^4.0.0",
-    "react-test-render": "^1.1.2",
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4"
+    "@testing-library/react": "^9.3.2",
+    "babel-loader": "^8.0.4",
+    "coveralls": "^3.0.9",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "grunt": "^1.0.4",
+    "grunt-karma-coveralls": "^2.5.4",
+    "jest": "^24.9.0",
+    "jest-dom": "^4.0.0",
+    "react-test-render": "^1.1.2"
   },
   "babel": {
     "presets": [
