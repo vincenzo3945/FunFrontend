@@ -67,15 +67,15 @@ class Beschikbaarheid extends React.Component
         }
         else
         {
-            user = JSON.parse(window.sessionStorage.user);
+            user = JSON.parse(window.localStorage.user);
 
             ///Waarom type error bij deze if statement
 
             console.log(user);
-            console.log(cookie.get('Token'));
+            console.log(cookie.get('token'));
             console.log(user.token);
 
-        if(user.token !== cookie.get('Token'))
+        if(user.token !== cookie.get('token'))
         {
             console.log("nope");
             this.redirect = true;
@@ -115,24 +115,7 @@ class Beschikbaarheid extends React.Component
         //this.loadSchedule(this.workDayList);
     }
 
-    testtable() {
-        var workD = this.getSchedule(this.weekNumber , user.personId);
-        
-        return(
-            <table>
-            <tbody>{workD.map(function(item) {
-                   
-                     return (
-                        <tr key = {item.workDayId}>
-                            <td>{item.workDate}</td>
-                            <td>{item.beginTime}</td>
-                            <td>{item.endTime}</td>
-                        </tr>
-                      )
-                   })}</tbody>
-             </table>
-        )
-    }
+    
     
 
     getSchedule = (weekNumber, employeId) =>{
@@ -184,6 +167,7 @@ class Beschikbaarheid extends React.Component
                    
                      return (
                         <tr key = {item.workDayId}>
+                            <td> {"Avalible"} </td>
                             <td>{item.workDate}</td>
                             <td>{item.beginTime}</td>
                             <td>{item.endTime}</td>
@@ -201,7 +185,7 @@ class Beschikbaarheid extends React.Component
     }
 
     logout = () =>{
-        cookie.remove('Token');
+        cookie.remove('token');
         localStorage.clear();
         this.redirectTo("");
     }
@@ -220,6 +204,12 @@ class Beschikbaarheid extends React.Component
            return(
                /*<li key={day.workDayId}>{day.workDate} , {day.workDayId}</li>*/
                 <tr className="table-row"> 
+                       <td><input type="checkbox" name="toggleSwitch" id="toggleSwitch" />
+                       <label class="toggle-switch-label" for="toggleSwitch" >
+                       True </label>
+                       <span class="toggle-switch-inner"></span>
+                       <span class="toggle-switch-switch"></span>
+                </td>
                    <td className="table-column">{day.workDate}</td>
                    <td className="table-column">{day.beginTime}</td>
                    <td className="table-column">{day.endTime}</td> 

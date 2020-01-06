@@ -38,7 +38,7 @@ var LoggedInUser = {
     zipcode: null,
     city: null,
     Country: null,
-    Token: null
+    token: null
 }
 
 
@@ -97,10 +97,10 @@ class App extends React.Component {
 
                     window.localStorage.setItem("user", JSON.stringify(LoggedInUser));
 
-                    console.log(window.localStorage.user)
+                    console.log(LoggedInUser)
 
-                    cookie.set(LoggedInUser.Token);
-                    console.log(cookie.get('Token'));
+                    cookie.set("token",LoggedInUser.token);
+                    console.log(cookie.get('token'));
             
 
                     console.log(LoggedInUser.firstName)

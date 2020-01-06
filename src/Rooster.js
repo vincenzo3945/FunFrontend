@@ -66,10 +66,10 @@ class Rooster extends React.Component
 
 
             console.log(user);
-            console.log(cookie.get('Token'));
+            console.log(cookie.get('token'));
             console.log(user.token);
 
-        if(user.token !== cookie.get('Token'))
+        if(user.token !== cookie.get('token'))
         {
             console.log("nope");
             this.redirect = true;
@@ -196,7 +196,7 @@ class Rooster extends React.Component
     }
 
     logout = () =>{
-        cookie.remove('Token');
+        cookie.remove('token');
         localStorage.clear();
         this.redirectTo("");
     }

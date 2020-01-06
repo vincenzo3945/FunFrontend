@@ -39,10 +39,10 @@ class Account extends React.Component
             user = JSON.parse(window.localStorage.user);
 
             console.log(user);
-            console.log(cookie.get('Token'));
+            console.log(cookie.get('token'));
             console.log(user.token);
 
-        if(user.token !== cookie.get('Token'))
+        if(user.token !== cookie.get('token'))
         {
             console.log("nope");
             this.redirect = true;
@@ -56,7 +56,7 @@ class Account extends React.Component
     }
 
     logout = () =>{
-        cookie.remove('Token');
+        cookie.remove('token');
         localStorage.clear();
         this.redirectTo("");
     }

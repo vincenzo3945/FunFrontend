@@ -69,10 +69,10 @@ class Groepsrooster extends React.Component
             user = JSON.parse(window.localStorage.user);
 
             console.log(user);
-            console.log(cookie.get('Token'));
+            console.log(cookie.get('token'));
             console.log(user.token);
 
-        if(user.token !== cookie.get('Token'))
+        if(user.token !== cookie.get('token'))
         {
             console.log("nope");
             this.redirect = true;
@@ -99,7 +99,7 @@ class Groepsrooster extends React.Component
         // this.weekNumber = moment().day("Monday").week(this.weekNumber).subtract("d", 1).week();
         // console.log(this.weekNumber);
 
-        this.getGroupSchedule(this.workDateString, user.personId) // TODO: misschien this.user van maken
+        this.getGroupSchedule(this.workDateString, user.personId)
     }
 
     testtable() {
@@ -192,7 +192,7 @@ class Groepsrooster extends React.Component
     }
 
     logout = () =>{
-        cookie.remove('Token');
+        cookie.remove('token');
         localStorage.clear();
         this.redirectTo("");
     }

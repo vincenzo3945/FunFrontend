@@ -12,6 +12,7 @@ const cookie = new Cookies();
 
 var user;
 
+
 var verlofList = [{
     personId: 1,
     beginDate: "27-06-2020",
@@ -58,10 +59,10 @@ class Verlof extends React.Component {
             ///Waarom type error bij deze if statement
 
             console.log(user);
-            console.log(cookie.get('Token'));
+            console.log(cookie.get('token'));
             console.log(user.token);
 
-        if(user.token !== cookie.get('Token'))
+        if(user.token !== cookie.get('token'))
         {
             console.log("nope");
             this.redirect = true;
@@ -73,12 +74,32 @@ class Verlof extends React.Component {
     {
         console.log(beginDate, endDate);
 
+        var selectedBegin = new Date(beginDate);
+        var now = new Date();
+        var selectedEnd = new Date(endDate);
+
+        console.log(selectedBegin);
+        console.log(selectedEnd);
+        console.log(now);
+
         var personID = user.personId;
         if (!beginDate) {
             alert("Begin date not set")
         }
         else if (!endDate) {
             alert("End date not set")
+        }
+        else if (selectedBegin < now)
+        {
+            alert("Begin date can't be in the past")
+        }
+        else if (selectedEnd < now)
+        {
+            alert("End date can't be in the past")
+        }
+        else if (selectedBegin < selectedEnd)
+        {
+            alert("End date can't be before the begin date")
         }
         /*else if (!personID)
         {
@@ -123,7 +144,16 @@ class Verlof extends React.Component {
 
     handleEndDayChange(selectedEndDate, modifiers, DayPickerInput) {
         const input = DayPickerInput.getInput();
-        this.setState({
+
+        console.log(selectedEndDate.toLocaleDateString());
+        
+        var selected = new Date(selectedEndDate.toLocaleDateString());
+        var now = new Date()
+        console.log(selected);
+        console.log(now);
+
+
+            this.setState({
             selectedEndDate,
             isEmptyEndDate: !input.value.trim(),
             isDisabledEndDate: modifiers.disabled === true,
@@ -131,6 +161,9 @@ class Verlof extends React.Component {
 
         this.selectedEndDate = selectedEndDate.toLocaleDateString();
         console.log(this.selectedEndDate);
+        
+        
+        
     }
 
 
@@ -139,7 +172,7 @@ class Verlof extends React.Component {
     }
 
     logout = () =>{
-        cookie.remove('Token');
+        cookie.remove('token');
         localStorage.clear();
         this.redirectTo("");
     }
