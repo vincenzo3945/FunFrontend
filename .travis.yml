@@ -10,7 +10,7 @@ install:
 
 Scipt:
   
-  - npm run test:coveralls
+  - npm run test:coveralls --watch=false --code-coverage
 
 
 
