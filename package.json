@@ -61,9 +61,11 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "grunt": "^1.0.4",
     "grunt-karma-coveralls": "^2.5.4",
+    "grunt-cli": "*",
     "jest": "^24.9.0",
     "jest-dom": "^4.0.0",
-    "react-test-render": "^1.1.2"
+    "react-test-render": "^1.1.2",
+    "nodeunit": "*"
   },
   "babel": {
     "presets": [
