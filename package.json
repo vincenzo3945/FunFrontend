@@ -31,7 +31,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
+    "testN": "nodeunit",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "eject": "react-scripts eject"
   },

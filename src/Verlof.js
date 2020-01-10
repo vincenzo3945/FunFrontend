@@ -13,6 +13,7 @@ const cookie = new Cookies();
 var user;
 
 
+
 var verlofList = [{
     personId: 1,
     beginDate: "27-06-2020",
@@ -41,6 +42,7 @@ class Verlof extends React.Component {
         this.selectedEndDate = selectedEndDate;
         this.state = {
             selectedDay: undefined,
+            test: 1
         };
 
         this.verlofList = verlofList;
@@ -85,6 +87,7 @@ class Verlof extends React.Component {
         var personID = user.personId;
         if (!beginDate) {
             alert("Begin date not set")
+            this.state.test = 0;
         }
         else if (!endDate) {
             alert("End date not set")
