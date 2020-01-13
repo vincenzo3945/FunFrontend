@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2a478beaaddf38555655db3925299036",
+    "revision": "97e4d382e8d346b9c6213c217964436a",
     "url": "/FunFrontend/index.html"
   },
   {
-    "revision": "08f7c7e2a100dcb156e1",
+    "revision": "b9048f3003145dfb830b",
     "url": "/FunFrontend/static/css/2.dd5f9282.chunk.css"
   },
   {
-    "revision": "d018dfb572237e39960a",
+    "revision": "519e0a555c2999a29a69",
     "url": "/FunFrontend/static/css/main.b63ed3d6.chunk.css"
   },
   {
-    "revision": "08f7c7e2a100dcb156e1",
-    "url": "/FunFrontend/static/js/2.86e04cb6.chunk.js"
+    "revision": "b9048f3003145dfb830b",
+    "url": "/FunFrontend/static/js/2.1cd93fac.chunk.js"
   },
   {
     "revision": "4191ec6efa422a685df893c6af95f05e",
-    "url": "/FunFrontend/static/js/2.86e04cb6.chunk.js.LICENSE"
+    "url": "/FunFrontend/static/js/2.1cd93fac.chunk.js.LICENSE"
   },
   {
-    "revision": "d018dfb572237e39960a",
-    "url": "/FunFrontend/static/js/main.115dfbd4.chunk.js"
+    "revision": "519e0a555c2999a29a69",
+    "url": "/FunFrontend/static/js/main.ce1af530.chunk.js"
   },
   {
     "revision": "79ed7b867fe9faa22444",
