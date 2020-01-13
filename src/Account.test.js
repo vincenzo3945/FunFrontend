@@ -6,7 +6,7 @@ import { shallow, mount, render } from 'enzyme';
 
 //const wrapper = shallow(<App />);
 //import App from './App';
-import Verlof from './Verlof';
+import Account from './Account';
 import {Cookies} from "react-cookie";
 
 const cookie = new Cookies();
@@ -33,71 +33,50 @@ describe('Full page render', () => {
        //window.sessionStorage.setItem("loggedinuser",  JSON.stringify(loggedInUser));
         window.localStorage.setItem("user", JSON.stringify(testUser));
          cookie.set("token","null");
-       shallow(<Verlof/>);
+       shallow(<Account/>);
     });
  });
 
 
 <reference path="src/Verlof.js" />
 
- describe('No date test', () => {
-    it('trows alert null begin date', () => {
+ describe('Reset Password Test', () => {
+
+
+    it('trows alert old password null', () => {
 
       window.localStorage.setItem("user", JSON.stringify(testUser));
       cookie.set("token","null");
-      const component = shallow(<Verlof/>);
+      const component = shallow(<Account/>);
 
-      component.instance().request(null, "25/01/2020");
+      component.instance().changePassword(1, null, "password", "password");
 
       expect(component.state("test")).toEqual(0);
 
     })
 
-    it('trows alert null end date', () => {
+    it('trows alert new password null', () => {
 
       window.localStorage.setItem("user", JSON.stringify(testUser));
       cookie.set("token","null");
-      const component = shallow(<Verlof/>);
+      const component = shallow(<Account/>);
 
-      component.instance().request("25/01/2020", null);
+      component.instance().changePassword(1, "password", null, "password");
 
       expect(component.state("test")).toEqual(0);
 
     })
 
-    it('trows alert begin date in past', () => {
+    it('trows alert conf password null', () => {
 
       window.localStorage.setItem("user", JSON.stringify(testUser));
       cookie.set("token","null");
-      const component = shallow(<Verlof/>);
+      const component = shallow(<Account/>);
 
-      component.instance().request("01-01-2020", "20-02-2020");
+      component.instance().changePassword(1, "password", "newPass", null);
 
       expect(component.state("test")).toEqual(0);
 
     })
 
-    it('trows alert end date in past', () => {
-
-      window.localStorage.setItem("user", JSON.stringify(testUser));
-      cookie.set("token","null");
-      const component = shallow(<Verlof/>);
-
-      component.instance().request("20-02-2020", "01-01-2020");
-
-      expect(component.state("test")).toEqual(0);
-
-    })
-
-    /*it('trows alert end date in past', () => {
-
-      window.localStorage.setItem("user", JSON.stringify(testUser));
-      cookie.set("token","null");
-      const component = shallow(<Verlof/>);
-
-      component.instance().request("20-02-2020", "19-02-2020");
-
-      expect(component.state("test")).toEqual(0);
-
-    })*/
  })

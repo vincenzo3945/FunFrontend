@@ -25,6 +25,10 @@ class Account extends React.Component
         this.redirectTo = this.redirectTo.bind(this);
         this.changePasswordInfo = this.changePasswordInfo.bind(this);
         this.changePassword = this.changePassword.bind(this);
+
+        this.state = {
+            test: 1
+        };
         this.result = result;
         this.check();
     }
@@ -92,14 +96,17 @@ class Account extends React.Component
 
         if (!oldPass) {
             alert("Old password is empty")
+            this.state.test = 0;
         }
         else if(!newPass)
         {
             alert("New password is empty")
+            this.state.test = 0;
         }
         else if(!confPass)
         {
             alert("Confirm password is empty")
+            this.state.test = 0;
         }
         else
         {
@@ -110,7 +117,7 @@ class Account extends React.Component
                 confNewPassword: confPass,
             }*/
 
-            Axios.put('http://localhost:4567/user/changepassword', {
+            Axios.put('http://localhost:4567/changepassword', {
                 userId: userID,
                 oldPassword: oldPass,
                 newPassword: newPass,

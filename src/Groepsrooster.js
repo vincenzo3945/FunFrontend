@@ -132,7 +132,7 @@ class Groepsrooster extends React.Component
         }
         else
         {
-            Axios.post('http://localhost:4567/schedule/group',{
+            Axios.post('http://localhost:4567/group',{
                 workDayId: null,
                 personId: employeId, //Waarom dit Inner join in back-end
                 weekNumber: null,

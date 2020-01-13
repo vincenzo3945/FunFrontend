@@ -91,18 +91,22 @@ class Verlof extends React.Component {
         }
         else if (!endDate) {
             alert("End date not set")
+            this.state.test = 0;
         }
         else if (selectedBegin < now)
         {
             alert("Begin date can't be in the past")
+            this.state.test = 0;
         }
         else if (selectedEnd < now)
         {
             alert("End date can't be in the past")
+            this.state.test = 0;
         }
         else if (selectedBegin < selectedEnd)
         {
             alert("End date can't be before the begin date")
+            this.state.test = 0;
         }
         /*else if (!personID)
         {
@@ -110,7 +114,7 @@ class Verlof extends React.Component {
         }*/
         else
         {
-            Axios.post('http://localhost:4567/schedule/vacation', {
+            Axios.post('http://localhost:4567/vacation', {
                 personId: personID,
                 beginDate: beginDate,
                 endDate: endDate

@@ -138,7 +138,7 @@ class Rooster extends React.Component
         }
         else
         {
-            Axios.post('http://localhost:4567/schedule/work',{
+            Axios.post('http://localhost:4567/work',{
                 workDayId: null,
                 personId: employeId,
                 weekNumber: weekNumber,

@@ -11,7 +11,16 @@ install:
 Scipt:
   
   - npm run test
+  - npm run build --prod
+  - cd ../FunFrontend
+  - cp index.html 404.html
 
-
+Deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: ./dist/FunFrontend
+  on:
 
 
