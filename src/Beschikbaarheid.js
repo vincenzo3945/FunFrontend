@@ -121,6 +121,7 @@ class Beschikbaarheid extends React.Component
     getSchedule = (weekNumber, employeId) =>{
         console.log("in getSchedule " + weekNumber + " " + employeId)
         employeId = 1;
+        
         if (!weekNumber || !employeId) {
             alert("An error accured, please login agian")
         }
