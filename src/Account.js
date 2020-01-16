@@ -42,13 +42,13 @@ class Account extends React.Component
         {
             user = JSON.parse(window.localStorage.user);
 
-            console.log(user);
-            console.log(cookie.get('token'));
-            console.log(user.token);
+            //console.log(user);
+            //console.log(cookie.get('token'));
+            //console.log(user.token);
 
         if(user.token !== cookie.get('token'))
         {
-            console.log("nope");
+            //console.log("nope");
             this.redirect = true;
         }
     }
@@ -72,9 +72,9 @@ class Account extends React.Component
         confirmed_new_password = document.getElementById("confirmNewPassword").value;
     
 
-        console.log(old_password);
-        console.log(new_password);
-        console.log(confirmed_new_password);
+        //console.log(old_password);
+        //console.log(new_password);
+        //console.log(confirmed_new_password);
 
         this.result = this.changePassword(userID ,old_password, new_password, confirmed_new_password);
         
@@ -92,7 +92,7 @@ class Account extends React.Component
 
     changePassword = (userID, oldPass, newPass, confPass) => {
 
-        console.log(oldPass, newPass, confPass);
+        //console.log(oldPass, newPass, confPass);
 
         if (!oldPass) {
             alert("Old password is empty")
@@ -126,7 +126,7 @@ class Account extends React.Component
                 
             }).then((Response) => {
                 
-                console.log(Response.data)
+                //console.log(Response.data)
 
                 if (Response.data)
                 {

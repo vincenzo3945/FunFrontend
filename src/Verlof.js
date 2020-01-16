@@ -60,13 +60,13 @@ class Verlof extends React.Component {
 
             ///Waarom type error bij deze if statement
 
-            console.log(user);
-            console.log(cookie.get('token'));
-            console.log(user.token);
+            //console.log(user);
+            //console.log(cookie.get('token'));
+            //console.log(user.token);
 
         if(user.token !== cookie.get('token'))
         {
-            console.log("nope");
+            //console.log("nope");
             this.redirect = true;
         }
         }
@@ -74,15 +74,15 @@ class Verlof extends React.Component {
 
     request(beginDate, endDate)
     {
-        console.log(beginDate, endDate);
+        //console.log(beginDate, endDate);
 
         var selectedBegin = new Date(beginDate);
         var now = new Date();
         var selectedEnd = new Date(endDate);
 
-        console.log(selectedBegin);
-        console.log(selectedEnd);
-        console.log(now);
+        //console.log(selectedBegin);
+        //console.log(selectedEnd);
+        //console.log(now);
 
         var personID = user.personId;
         if (!beginDate) {
@@ -146,18 +146,18 @@ class Verlof extends React.Component {
         })
 
         this.selectedBeginDate = selectedBeginDate.toLocaleDateString();
-        console.log(this.selectedBeginDate);
+        //console.log(this.selectedBeginDate);
     }
 
     handleEndDayChange(selectedEndDate, modifiers, DayPickerInput) {
         const input = DayPickerInput.getInput();
 
-        console.log(selectedEndDate.toLocaleDateString());
+        //console.log(selectedEndDate.toLocaleDateString());
         
         var selected = new Date(selectedEndDate.toLocaleDateString());
         var now = new Date()
-        console.log(selected);
-        console.log(now);
+        //console.log(selected);
+        //console.log(now);
 
 
             this.setState({
@@ -167,7 +167,7 @@ class Verlof extends React.Component {
         })
 
         this.selectedEndDate = selectedEndDate.toLocaleDateString();
-        console.log(this.selectedEndDate);
+        //console.log(this.selectedEndDate);
         
         
         
@@ -197,7 +197,7 @@ class Verlof extends React.Component {
         const { selectedEndDate, isDisabledEndDate, isEmptyEndDate } = this.state;
 
         const verlof = verlofList.map(day => {
-            console.log(day.personId, day.beginDate, day.endDate);
+            //console.log(day.personId, day.beginDate, day.endDate);
             return(
                 <tr className="table-row">
                     <td className="table-column"> {day.beginDate}</td>

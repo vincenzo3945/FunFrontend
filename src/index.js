@@ -17,7 +17,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const routing = (
     <Router>
-    <div>
+    <Route exact path="/" component={App} />
+      <Route path="/Home" component={Home} />
+      <Route path="/Beschikbaarheid" component={Beschikbaarheid} />
+      <Route path="/Rooster" component={Rooster} />
+      <Route path="/Groepsrooster" component={Groepsrooster} />
+      <Route path="/Verlof" component={Verlof} />
+      <Route path="/Account" component={Account} />
+    {/*<div>
       <Route exact path="/" component={App} />
       <Route path="/Home" component={Home} />
       <Route path="/Beschikbaarheid" component={Beschikbaarheid} />
@@ -25,7 +32,7 @@ const routing = (
       <Route path="/Groepsrooster" component={Groepsrooster} />
       <Route path="/Verlof" component={Verlof} />
       <Route path="/Account" component={Account} />
-    </div>
+    </div>*/}
   </Router>
 )
 

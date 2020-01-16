@@ -59,8 +59,8 @@ class App extends React.Component {
     LoginInfo() {
         user_name = document.getElementById("username").value;
         pass_word = document.getElementById("password").value;
-        console.log(user_name);
-        console.log(pass_word);
+        //console.log(user_name);
+        //console.log(pass_word);
         this.Login(user_name, pass_word);
     }
 
@@ -68,7 +68,7 @@ class App extends React.Component {
 
     Login = (uname, pword) => {
 
-        console.log(uname);
+        //console.log(uname);
     
         if(!uname)
         {
@@ -90,20 +90,20 @@ class App extends React.Component {
             password: LoginModel.password,
         })
             .then((response) => {
-                console.log(response);
+                //console.log(response);
                 if(response.data)
                 {
                     LoggedInUser = response.data;
 
                     window.localStorage.setItem("user", JSON.stringify(LoggedInUser));
 
-                    console.log(LoggedInUser)
+                    //console.log(LoggedInUser)
 
                     cookie.set("token",LoggedInUser.token);
-                    console.log(cookie.get('token'));
+                    //console.log(cookie.get('token'));
             
 
-                    console.log(LoggedInUser.firstName)
+                    //console.log(LoggedInUser.firstName)
                     this.redirectTo()
                     //alert("Login successful")
                 }

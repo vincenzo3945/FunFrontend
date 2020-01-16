@@ -68,13 +68,13 @@ class Groepsrooster extends React.Component
         {
             user = JSON.parse(window.localStorage.user);
 
-            console.log(user);
-            console.log(cookie.get('token'));
-            console.log(user.token);
+            //console.log(user);
+            //console.log(cookie.get('token'));
+            //console.log(user.token);
 
         if(user.token !== cookie.get('token'))
         {
-            console.log("nope");
+            //console.log("nope");
             this.redirect = true;
         }
     }
@@ -84,7 +84,7 @@ class Groepsrooster extends React.Component
     {
         this.workDateString = moment(this.workDateString, "DD MM YYYY").add('d', 1).format("DD-MM-YYYY");
         this.setState({date: this.workDateString});
-        console.log(this.workDateString + " work string");
+        //console.log(this.workDateString + " work string");
         // this.weekNumber = moment().day("Monday").week(this.weekNumber).add("d", 1).week();
         // console.log(this.weekNumber);
 
@@ -95,7 +95,7 @@ class Groepsrooster extends React.Component
     {
         this.workDateString = moment(this.workDateString, "DD MM YYYY").subtract('d', 1).format("DD-MM-YYYY");
         this.setState({date: this.workDateString});
-        console.log(this.workDateString + " substract");
+        //console.log(this.workDateString + " substract");
         // this.weekNumber = moment().day("Monday").week(this.weekNumber).subtract("d", 1).week();
         // console.log(this.weekNumber);
 
@@ -125,23 +125,23 @@ class Groepsrooster extends React.Component
 
     getGroupSchedule = (workDay, employeId) =>{
        
-        console.log("in getGroupSchedule " + workDay + " " + employeId)
+        //console.log("in getGroupSchedule " + workDay + " " + employeId)
 
         if (!workDay || !employeId) {
             alert("An error accured, please login agian")
         }
         else
         {
-            Axios.post('http://localhost:4567/group',{
+            Axios.post('http://localhost:4567/group/',{
                 workDayId: null,
-                personId: employeId, //Waarom dit Inner join in back-end
-                weekNumber: null,
+                personId: employeId, 
                 workDate: workDay,
+                weekNumber: null,
                 beginTime: null,
                 endTime: null,
             })
             .then((Response) =>{
-                console.log(Response);
+                //console.log(Response);
                 if (Response.data) {
                     
                     workDayList = Response.data;  
@@ -157,16 +157,16 @@ class Groepsrooster extends React.Component
     }
 
     loadSchedule = (items) => {
-        console.log("in loadSchedule");
+        //console.log("in loadSchedule");
         
-        console.log(items);
+        //console.log(items);
 
         if (!items || items.lenght === 0) {
             return("No data")
         }
         else
         {
-            console.log("na eerste if")
+            //console.log("na eerste if")
 
         return (
             <table>
@@ -207,7 +207,7 @@ class Groepsrooster extends React.Component
         {
 
         const worklist = workDayList.map(day => {
-           console.log(day.workDate, day.workDayId);
+           //console.log(day.workDate, day.workDayId);
            return(
                /*<li key={day.workDayId}>{day.workDate} , {day.workDayId}</li>*/
                 <tr className="table-row"> 

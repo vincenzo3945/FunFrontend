@@ -35,15 +35,15 @@ class Home extends React.Component
         {
         user = JSON.parse(window.localStorage.user);
 
-        console.log(user.personId);
+        //console.log(user.personId);
 
-        console.log(user);
-        console.log(cookie.get('token'));
-        console.log(user.token);
+        //console.log(user);
+        //console.log(cookie.get('token'));
+        //console.log(user.token);
 
         if(user.token !== cookie.get('token'))
         {
-            console.log("nope");
+            //console.log("nope");
             this.redirect = true;
         }
         }

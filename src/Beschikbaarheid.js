@@ -71,13 +71,13 @@ class Beschikbaarheid extends React.Component
 
             ///Waarom type error bij deze if statement
 
-            console.log(user);
-            console.log(cookie.get('token'));
-            console.log(user.token);
+            //console.log(user);
+            //console.log(cookie.get('token'));
+            //console.log(user.token);
 
         if(user.token !== cookie.get('token'))
         {
-            console.log("nope");
+            //console.log("nope");
             this.redirect = true;
         }
         }
@@ -90,11 +90,11 @@ class Beschikbaarheid extends React.Component
         this.workDateString = moment(this.workDateString, "DD MMM").add('w', 1).format("DD MMM");
         //console.log(this.workDate + " work");
         this.setState({date: this.workDateString});
-        console.log(this.workDateString + " work string");
+        //console.log(this.workDateString + " work string");
         //this.weekNumber = moment(this.workDateString, "DD-MM-YYYY").isoWeek();
         //this.weekNumber = moment(this.weekNumber).add("w",1).week();
         this.weekNumber = moment().day("Monday").week(this.weekNumber).add("w", 1).week();
-        console.log(this.weekNumber);
+        //console.log(this.weekNumber);
 
         this.getSchedule(this.weekNumber, user.personId)
         
@@ -105,11 +105,11 @@ class Beschikbaarheid extends React.Component
         this.workDateString = moment(this.workDateString, "DD MMM").subtract('w', 1).format("DD MMM");
         //this.workDate = moment(workDate).subtract('days', 7).format("DD-MM-YYYY");
         this.setState({date: this.workDateString});
-        console.log(this.workDateString + " substract");
+        //console.log(this.workDateString + " substract");
         //this.weekNumber = moment(this.workDateString, "DD-MM-YYYY").isoWeek();
         //this.weekNumber = moment(this.weekNumber).subtract("w",1).week();
         this.weekNumber = moment().day("Monday").week(this.weekNumber).subtract("w", 1).week();
-        console.log(this.weekNumber);
+        //console.log(this.weekNumber);
 
         this.getSchedule(this.weekNumber, user.personId)
         //this.loadSchedule(this.workDayList);
@@ -119,7 +119,7 @@ class Beschikbaarheid extends React.Component
     
 
     getSchedule = (weekNumber, employeId) =>{
-        console.log("in getSchedule " + weekNumber + " " + employeId)
+        //console.log("in getSchedule " + weekNumber + " " + employeId)
         employeId = 1;
         
         if (!weekNumber || !employeId) {
@@ -151,16 +151,16 @@ class Beschikbaarheid extends React.Component
     }
 
     loadSchedule = (items) => {
-        console.log("in loadSchedule");
+        //console.log("in loadSchedule");
         
-        console.log(items);
+        //console.log(items);
 
         if (!items || items.lenght === 0) {
             return("No data")
         }
         else
         {
-            console.log("na eerste if")
+            //console.log("na eerste if")
 
         return (
             <table>
@@ -201,7 +201,7 @@ class Beschikbaarheid extends React.Component
         {
 
         const worklist = workDayList.map(day => {
-           console.log(day.workDate, day.workDayId);
+           //console.log(day.workDate, day.workDayId);
            return(
                /*<li key={day.workDayId}>{day.workDate} , {day.workDayId}</li>*/
                 <tr className="table-row"> 
