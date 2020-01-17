@@ -9,7 +9,7 @@ import Verlof from './Verlof';
 import Account from './Account';
 import Groepsrooster from './Groepsrooster';
 import './index.css';
-import { CookiesProvider } from 'react-cookie';
+//import { CookiesProvider } from 'react-cookie';
 
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';

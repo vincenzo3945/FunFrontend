@@ -103,18 +103,18 @@ class Verlof extends React.Component {
             alert("End date can't be in the past")
             this.state.test = 0;
         }
-        else if (selectedBegin < selectedEnd)
+        /*else if (selectedBegin < selectedEnd)
         {
             alert("End date can't be before the begin date")
             this.state.test = 0;
-        }
+        }*/
         /*else if (!personID)
         {
             this.redirectTo("uitloggen", this.props.location.state.LoggedInUser)
         }*/
         else
         {
-            Axios.post('http://localhost:4567/vacation', {
+            Axios.post('http://localhost:4567/vacation/', {
                 personId: personID,
                 beginDate: beginDate,
                 endDate: endDate

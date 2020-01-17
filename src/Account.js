@@ -42,7 +42,7 @@ class Account extends React.Component
         {
             user = JSON.parse(window.localStorage.user);
 
-            //console.log(user);
+            console.log(user);
             //console.log(cookie.get('token'));
             //console.log(user.token);
 
@@ -66,19 +66,21 @@ class Account extends React.Component
     }
 
     changePasswordInfo(){
-        userID = user.userId;
+        userID = user.personId;
         old_password = document.getElementById("oldPassword").value;
         new_password = document.getElementById("newPassword").value;
-        confirmed_new_password = document.getElementById("confirmNewPassword").value;
+        confirmed_new_password = document.getElementById("confirmedNewPassword").value;
     
 
         //console.log(old_password);
         //console.log(new_password);
         //console.log(confirmed_new_password);
 
-        this.result = this.changePassword(userID ,old_password, new_password, confirmed_new_password);
+        this.changePassword(userID ,old_password, new_password, confirmed_new_password);
         
         //TODO: Testen feedback systeem
+
+        /*console.log(this.result);
 
         if (this.result === "True") {
             alert("Password changed succesfull")
@@ -86,13 +88,13 @@ class Account extends React.Component
         else
         {
             alert("Failed to changed password")
-        }
+        }*/
         
     }
 
     changePassword = (userID, oldPass, newPass, confPass) => {
 
-        //console.log(oldPass, newPass, confPass);
+        console.log(oldPass, newPass, confPass);
 
         if (!oldPass) {
             alert("Old password is empty")
@@ -110,27 +112,34 @@ class Account extends React.Component
         }
         else
         {
-            /*const changePassModel = {
+            const changePassModel = {
+                userId: user.userId,
+                oldPassword: oldPass,
+                newPassword: newPass,
+                confNewPassword: confPass,
+            }
+
+            console.log(changePassModel);
+
+            Axios.post('http://localhost:4567/changepassword/', {
                 userId: userID,
                 oldPassword: oldPass,
                 newPassword: newPass,
                 confNewPassword: confPass,
-            }*/
-
-            Axios.put('http://localhost:4567/changepassword', {
-                userId: userID,
-                oldPassword: oldPass,
-                newPassword: newPass,
-                confNewPassword: confPass,
-
                 
             }).then((Response) => {
                 
-                //console.log(Response.data)
+                console.log(Response.data + ' resonse')
 
-                if (Response.data)
+                //this.result = Response;
+
+                if (Response == 'false') {
+                    alert("Failed to changed password False")
+                }
+                else
                 {
-                    return Response.data;
+                    alert("Password changed succesfull")
+                    
                 }
             })
             
@@ -189,7 +198,7 @@ class Account extends React.Component
                                 //<button type="button" className="login-button" onClick={function () { alert('Dit is een login button'); }}>Login </button>*/
                                 //<button type="button" className="login-button" onClick="loginInfo()" id="loginButton">Login </button>*/
                             }
-                            <button type="button" className="login-button" onClick={this.changePasswordInfo}>Login</button>
+                            <button type="button" className="login-button" onClick={this.changePasswordInfo}>Change password</button>
 
                         </div>
                     </div>

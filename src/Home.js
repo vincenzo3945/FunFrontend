@@ -86,32 +86,32 @@ class Home extends React.Component
                         <div className="item">
                             
                             <a>
-                            <img src={homeImage} height="120" width="120" onClick={ () => this.redirectTo("home")}></img>      
+                            <img alt="HomeImage" src={homeImage} height="120" width="120" onClick={ () => this.redirectTo("home")}></img>      
                             </a> 
                             Home          
                         </div>
             
                         <div className="item">
                             <a>
-                            <img src={beschikbaarheidImage} height="120" width="120" onClick={ () => this.redirectTo("beschikbaarheid")}></img>
+                            <img alt="beschikbaarheidImage" src={beschikbaarheidImage} height="120" width="120" onClick={ () => this.redirectTo("beschikbaarheid")}></img>
                             </a>
                             Beschikbaarheid
                         </div>
                         <div className="item">
                             <a>
-                            <img src={groepsRoosterImage} height="120" width="120" onClick={ () => this.redirectTo("groepsrooster")}></img>               
+                            <img alt="groepsRoosterImage" src={groepsRoosterImage} height="120" width="120" onClick={ () => this.redirectTo("groepsrooster")}></img>               
                             </a>
                             Groepsrooster
                         </div>
                         <div className="item">
                             <a>
-                            <img src={verlofImage} height="120" width="120" onClick={ () => this.redirectTo("verlof")}></img>                
+                            <img alt="verlofImage" src={verlofImage} height="120" width="120" onClick={ () => this.redirectTo("verlof")}></img>                
                             </a>
                             Verlof
                         </div>
                         <div className="item">
                             <a>
-                            <img src={accountImage} height="120" width="120" onClick={ () => this.redirectTo("account")}></img>                        
+                            <img alt="accountImage" src={accountImage} height="120" width="120" onClick={ () => this.redirectTo("account")}></img>                        
                             </a>
                             Account
                         </div>
