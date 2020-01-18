@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
+//import { Route, HashRouter as Router } from 'react-router-dom'
 import App from './App';
 import Home from './Home';
 import Beschikbaarheid from './Beschikbaarheid';
@@ -15,15 +16,19 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
+
+
 const routing = (
     <Router>
-    <Route exact path="/" component={App} />
+      <Route exact path="/" component={App} />
       <Route path="/Home" component={Home} />
       <Route path="/Beschikbaarheid" component={Beschikbaarheid} />
       <Route path="/Rooster" component={Rooster} />
       <Route path="/Groepsrooster" component={Groepsrooster} />
       <Route path="/Verlof" component={Verlof} />
       <Route path="/Account" component={Account} />
+    
+    
     {/*<div>
       <Route exact path="/" component={App} />
       <Route path="/Home" component={Home} />
@@ -33,6 +38,8 @@ const routing = (
       <Route path="/Verlof" component={Verlof} />
       <Route path="/Account" component={Account} />
     </div>*/}
+
+  
   </Router>
 )
 
