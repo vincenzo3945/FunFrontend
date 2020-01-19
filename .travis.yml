@@ -13,7 +13,7 @@ install:
 Scipt:
   
   - npm run test
-  - npm run deploy
+  #- npm run deploy
 
 
 deploy:
