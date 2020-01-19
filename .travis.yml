@@ -13,14 +13,15 @@ install:
 Scipt:
   
   - npm run test
-  #- npm run deploy
-  
+  - npm run deploy
+
 
 
 deploy:
   provider: pages
   skip_cleanup: true
-  #github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  github_token:  be1734e4aacd6ab29e4e8797d738b93a88aa356b   # Set in the settings page of your repository, as a secure variable
+  target-branch: gh-pages
   keep_history: true
   on:
     branch: master
