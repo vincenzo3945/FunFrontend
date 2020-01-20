@@ -6,10 +6,10 @@ node_js:
   - node
 
 install:
-  #- npm ci
+  - npm ci
 
-travis:
-  - CI=false
+#travis:
+  #- CI=false
   
 
 Scipt:
