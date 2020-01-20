@@ -15,19 +15,19 @@ travis:
 Scipt:
   
   - npm run test
-  - npm run deploy
+  #- npm run deploy
 
 
 
-deploy:
-  CI: false
-  provider: pages
-  skip_cleanup: true
-  github_token:  be1734e4aacd6ab29e4e8797d738b93a88aa356b   # Set in the settings page of your repository, as a secure variable
-  target-branch: gh-pages
-  keep_history: true
-  on:
-    branch: master
+#deploy:
+#  CI: false
+#  provider: pages
+#  skip_cleanup: true
+#  github_token:  be1734e4aacd6ab29e4e8797d738b93a88aa356b   # Set in the settings page of your repository, as a secure variable
+#  target-branch: gh-pages
+#  keep_history: true
+#  on:
+#    branch: master
 
 
 
